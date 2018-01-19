@@ -51,10 +51,10 @@ process.demo = cms.EDAnalyzer('Dracarys',
                               #Trigger variables
                               isTrigger = cms.bool(False),
                               isTriggerToo = cms.bool(False),
-                              #TriggerPath1 = cms.string(""), #for testing
-                              TriggerPath1 = cms.string("HLT_PFMET110_PFMHT110_IDTight"), #or empty for no trigger
-                              #TriggerPath2 = cms.string(""), #also for testing or empty for no trigger
-                              TriggerPath2 = cms.string("HLT_DoubleMu3_PFMET50"),
+                              TriggerPath1 = cms.string(""), #for testing
+                              ##TriggerPath1 = cms.string("HLT_PFMET110_PFMHT110_IDTight"), #or empty for no trigger
+                              TriggerPath2 = cms.string(""), #also for testing or empty for no trigger
+                              #TriggerPath2 = cms.string("HLT_DoubleMu3_PFMET50"),
                               #Cuts
                               Pvtx_ndof_min   = cms.int32(4), #Vertices DOF
                               Pvtx_vtx_max  = cms.double(24.),
@@ -79,7 +79,7 @@ process.demo = cms.EDAnalyzer('Dracarys',
                               MaxMTMuonMet =  cms.double(100.0),
                               )
 process.TFileService = cms.Service("TFileService",
-                                   fileName = cms.string("Tree.root"),
+                                   fileName = cms.string("Tree_no_HLT.root"),
                                    closeFileFast = cms.untracked.bool(True)
                                    )
 
